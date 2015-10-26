@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0-1",
+  "description": "TwitterCardsTagHelpers Class Library",
+  "authors": [
+    "Peter Blazejewicz"
+  ],
+  "tags": [
+    "MVC6",
+    "ASPNET5",
+    "Twitter"
+  ],
+  "projectUrl": "https://github.com/peterblazejewicz/TwitterCardsTagHelpers",
+  "licenseUrl": "https://github.com/peterblazejewicz/TwitterCardsTagHelpers/LICENSE",
+  "tooling": {
+    "defaultNamespace": "TwitterCardsTagHelpers"
+  },
+  "dependencies": {
+    "Microsoft.AspNet.Mvc": "6.0.0-beta8",
+    "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta8"
+  },
+  "frameworks": {
+    "dnx451": {},
+    "dnxcore50": {}
+  }
+}
