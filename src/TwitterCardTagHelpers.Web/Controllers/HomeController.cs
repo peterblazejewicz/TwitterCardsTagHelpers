@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 
-namespace TwitterCardsTagHelpers.Web.Controllers
+namespace TwitterCardTagHelpers.Web.Controllers
 {
     public class HomeController : Controller
     {

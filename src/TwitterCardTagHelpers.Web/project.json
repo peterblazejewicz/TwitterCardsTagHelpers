@@ -2,7 +2,7 @@
   "webroot": "wwwroot",
   "version": "1.0.0-*",
   "tooling": {
-    "defaultNamespace": "TwitterCardsTagHelpers.Web"
+    "defaultNamespace": "TwitterCardTagHelpers.Web"
   },
 
   "dependencies": {

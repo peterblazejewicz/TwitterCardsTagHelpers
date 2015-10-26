@@ -9,7 +9,7 @@ using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
 
-namespace TwitterCardsTagHelpers.Web
+namespace TwitterCardTagHelpers.Web
 {
     public class Startup
     {

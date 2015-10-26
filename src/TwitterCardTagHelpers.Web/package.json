@@ -1,5 +1,5 @@
 {
-  "name": "TwitterCardsTagHelpers.Web",
+  "name": "TwitterCardTagHelpers.Web",
   "version": "0.0.0",
   "devDependencies": {
     "gulp": "^3.9.0",
