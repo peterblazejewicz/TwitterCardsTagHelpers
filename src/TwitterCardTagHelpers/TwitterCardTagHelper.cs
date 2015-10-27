@@ -27,8 +27,7 @@ namespace TwitterCardTagHelpers
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            var builder = new DefaultTagHelperContent();
-            output.Po
+            output.TagName = null;
         }
     }
 }

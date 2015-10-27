@@ -16,7 +16,8 @@
     "Microsoft.Framework.Configuration.Json": "1.0.0-beta8",
     "Microsoft.Framework.Logging": "1.0.0-beta8",
     "Microsoft.Framework.Logging.Console": "1.0.0-beta8",
-    "Microsoft.Framework.Logging.Debug" : "1.0.0-beta8"
+    "Microsoft.Framework.Logging.Debug" : "1.0.0-beta8",
+    "TwitterCardTagHelpers": "1.0.0-*"
   },
 
   "commands": {
@@ -41,9 +42,14 @@
     "**.vspscc"
   ],
   "scripts": {
-    "prepublish": [
+    "postrestore": [
       "npm install",
       "bower install",
+      "gulp bower",
+      "gulp clean",
+      "gulp min"
+    ],
+    "postbuild": [
       "gulp clean",
       "gulp min"
     ]
