@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Razor.Runtime.TagHelpers;
+using Microsoft.AspNet.Mvc.Rendering;
 
 namespace TwitterCardTagHelpers.Web.TagHelpers
 {
@@ -27,7 +28,12 @@ namespace TwitterCardTagHelpers.Web.TagHelpers
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            output.TagName = "div";
+            output.TagName = null;
+            var cardTag = new TagBuilder("meta");
+            cardTag.TagRenderMode = TagRenderMode.SelfClosing;
+            cardTag.MergeAttribute("name", "twitter:card");
+            cardTag.MergeAttribute("content", "summary");
+            output.PostContent.Append(cardTag);
         }
     }
 }
