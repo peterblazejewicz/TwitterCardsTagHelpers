@@ -42,47 +42,42 @@ namespace TwitterCardTagHelpers.Web.TagHelpers
             {
                 card = "summary";
             }
-            var typeTag = CreateTagBuilder(new Dictionary<string, string>()
+            output.PostContent.Append(CreateTagBuilder(new Dictionary<string, string>()
             {
-                ["name"] = "twitter:card",
-                ["content"] = card
-            });
-            output.PostContent.Append(typeTag);
+                ["name"] = "twitter:site",
+                ["card"] = "summary"
+            }));
             if (site != null)
             {
-                var siteTag = CreateTagBuilder(new Dictionary<string, string>()
+                output.PostContent.Append(CreateTagBuilder(new Dictionary<string, string>()
                 {
                     ["name"] = "twitter:site",
                     ["content"] = site
-                });
-                output.PostContent.Append(siteTag);
+                }));
             }
             if (title != null)
             {
-                var titleTag = CreateTagBuilder(new Dictionary<string, string>()
+                output.PostContent.Append(CreateTagBuilder(new Dictionary<string, string>()
                 {
                     ["name"] = "twitter:title",
                     ["content"] = title
-                });
-                output.PostContent.Append(titleTag);
+                }));
             }
             if (description != null)
             {
-                var descriptionTag = CreateTagBuilder(new Dictionary<string, string>()
+                output.PostContent.Append(CreateTagBuilder(new Dictionary<string, string>()
                 {
                     ["name"] = "twitter:description",
                     ["content"] = description
-                });
-                output.PostContent.Append(descriptionTag);
+                }));
             }
             if (image != null)
             {
-                var imageTag = CreateTagBuilder(new Dictionary<string, string>()
+                output.PostContent.Append(CreateTagBuilder(new Dictionary<string, string>()
                 {
                     ["name"] = "twitter:image",
                     ["content"] = image
-                });
-                output.PostContent.Append(imageTag);
+                }));
             }
         }
 
