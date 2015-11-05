@@ -8,10 +8,17 @@ using Microsoft.AspNet.Mvc.Rendering;
 namespace TwitterCardTagHelpers.Web.TagHelpers
 {
     // You may need to install the Microsoft.AspNet.Razor.Runtime package into your project
-    [HtmlTargetElement("twitter-summary")]
-
+    [HtmlTargetElement("twitter-summary", Attributes = SiteAttributeName)]
+    [HtmlTargetElement("twitter-summary", Attributes = TitleAttributeName)]
+    [HtmlTargetElement("twitter-summary", Attributes = DescriptionAttributeName)]
+    [HtmlTargetElement("twitter-summary", Attributes = ImageAttributeName)]
     public class TwitterSummaryCard : TagHelper
     {
+
+        private const string SiteAttributeName = "site";
+        private const string TitleAttributeName = "title";
+        private const string DescriptionAttributeName = "description";
+        private const string ImageAttributeName = "image";
 
         [HtmlAttributeName("site")]
         public string site { get; set; }
@@ -36,14 +43,54 @@ namespace TwitterCardTagHelpers.Web.TagHelpers
             {
                 throw new ArgumentNullException(nameof(output));
             }
+            output.TagName = null;
+            output.PostContent.Append(GenerateMetaTag(new Dictionary<string, string>()
+            {
+                ["name"] = "twitter:site",
+                ["card"] = "summary"
+            }));
+            if (site != null)
+            {
+                output.PostContent.Append(GenerateMetaTag(new Dictionary<string, string>()
+                {
+                    ["name"] = "twitter:site",
+                    ["content"] = site
+                }));
+            }
+            if (title != null)
+            {
+                output.PostContent.Append(GenerateMetaTag(new Dictionary<string, string>()
+                {
+                    ["name"] = "twitter:title",
+                    ["content"] = title
+                }));
+            }
+            if (description != null)
+            {
+                output.PostContent.Append(GenerateMetaTag(new Dictionary<string, string>()
+                {
+                    ["name"] = "twitter:description",
+                    ["content"] = description
+                }));
+            }
+            if (image != null)
+            {
+                output.PostContent.Append(GenerateMetaTag(new Dictionary<string, string>()
+                {
+                    ["name"] = "twitter:image",
+                    ["content"] = image
+                }));
+            }
+
+
         }
 
-        private void GenerateMetaTag(TagHelperOutput output, string key, string value)
+        private TagBuilder GenerateMetaTag(IDictionary<string, string> attrs)
         {
             var tb = new TagBuilder("meta");
             tb.TagRenderMode = TagRenderMode.SelfClosing;
-            tb.MergeAttribute(key, value);
-            output.PostContent.Append(tb);
+            tb.MergeAttributes<string, string>(attrs);
+            return tb;
         }
     }
 }
