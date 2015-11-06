@@ -46,8 +46,8 @@ namespace TwitterCardTagHelpers.Web.TagHelpers
             output.TagName = null;
             output.PostContent.Append(GenerateMetaTag(new Dictionary<string, string>()
             {
-                ["name"] = "twitter:site",
-                ["card"] = "summary"
+                ["name"] = "twitter:card",
+                ["content"] = "summary"
             }));
             if (site != null)
             {
