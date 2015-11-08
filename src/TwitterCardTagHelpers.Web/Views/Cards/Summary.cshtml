@@ -4,3 +4,32 @@
 @{
     // ViewBag.Title = "Summary Page";
 }
+<section>
+  <div class="page-header">
+    <h1>Summary Card <small>tag helper</small></h1>
+  </div>
+  <blockquote cite="https://dev.twitter.com/cards/types/summary">
+    <p>The Summary Card can be used for many kinds of web content, from blog posts and news articles, to products and restaurants. It is designed to give the reader a preview of the content before clicking through to your website.</p>
+  </blockquote>
+  <a href="https://dev.twitter.com/cards/types/summary">https://dev.twitter.com/cards/types/summary</a>
+  <pre>
+    <code class="html">&lt;twitter-summary site=&quot;@@flickr&quot;
+      title=&quot;Small Island Developing States Photo Submission&quot;
+      description=&quot;View the album on Flickr.&quot;
+      image=&quot;https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg&quot;/&gt;</code>
+  </pre>
+  <p>
+    This will produce:
+  </p>
+  <pre>
+    <code class="html">&lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot; /&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@@flickr&quot; /&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Small Island Developing States Photo Submission&quot; /&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;View the album on Flickr.&quot; /&gt;
+&lt;meta name=&quot;twitter:image&quot; content=&quot;https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg&quot; /&gt;</code>
+  </pre>
+  <twitter-summary site="@@flickr"
+    title="Small Island Developing States Photo Submission"
+    description="View the album on Flickr."
+    image="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg"/>
+</section>

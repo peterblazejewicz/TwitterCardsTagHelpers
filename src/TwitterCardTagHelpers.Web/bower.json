@@ -3,7 +3,9 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.5",
+    "highlightjs": "^8.9.1",
     "jquery": "^2.1.4"
+
   },
   "overrides": {
     "bootstrap": {
@@ -11,6 +13,13 @@
         "dist/css/*.**",
         "dist/fonts/*.*",
         "dist/js/bootstrap{.js,.min.js}"
+      ]
+    },
+    "highlightjs": {
+      "main": [
+        "highlight.pack{.min.js,.js}",
+        "styles/default.css",
+        "styles/zenburn.css"
       ]
     },
     "jquery": {
