@@ -4,3 +4,35 @@
 @{
     // ViewBag.Title = "SummaryLargeImage Page";
 }
+<section>
+  <div class="page-header">
+    <h1>Summary Card with Large Image <small>tag helper</small></h1>
+  </div>
+  <blockquote cite="https://dev.twitter.com/cards/types/summary-large-image">
+    <p>The Summary Card with Large Image features a large, full-width prominent image alongside a tweet. It is designed to give the reader a rich photo experience, and clicking on the image brings the user to your website.</p>
+  </blockquote>
+  <a href="https://dev.twitter.com/cards/types/summary-large-image">https://dev.twitter.com/cards/types/summary-large-image</a>
+  <pre>
+    <code class="html">&lt;twitter-summary-large-image site=&quot;@@nytimes&quot;
+      creator=&quot;@@SarahMaslinNir&quot;
+      title=&quot;Parade of Fans for Houston&CloseCurlyQuote;s Funeral&quot;
+      description=&quot;NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here.&quot;
+      image=&quot;http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg&quot; /&gt;</code>
+  </pre>
+  <p>
+    This will produce:
+  </p>
+  <pre>
+    <code class="html">&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@@nytimes&quot;&gt;
+&lt;meta name=&quot;twitter:creator&quot; content=&quot;@@SarahMaslinNir&quot;&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Parade of Fans for Houston&CloseCurlyQuote;s Funeral&quot;&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here.&quot;&gt;
+&lt;meta name=&quot;twitter:image&quot; content=&quot;http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg&quot;&gt;</code>
+  </pre>
+  <twitter-summary-large-image site="@@nytimes"
+    creator="@@SarahMaslinNir"
+    title="Parade of Fans for Houston’s Funeral"
+    description="NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here."
+    image="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg" />
+</section>
