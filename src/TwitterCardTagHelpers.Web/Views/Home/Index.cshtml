@@ -3,89 +3,22 @@
 }
 
 <div class="page-header">
-  <h1>WIP TwitterCard <small>TwitterCard tag helpers</small></h1>
+  <h1>Twitter Cards <small>tag helpers</small></h1>
 </div>
-
-  <pre>
-    &lt;twitter-summary site=&quot;@@flickr&quot;
-      title=&quot;Small Island Developing States Photo Submission&quot;
-      description=&quot;View the album on Flickr.&quot;
-      image=&quot;https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg&quot;/&gt;</pre>
-<p>
-  Output:
-  <pre>
-    &lt;meta card=&quot;summary&quot; name=&quot;twitter:site&quot;&gt;
-    &lt;meta content=&quot;@@flickr&quot; name=&quot;twitter:site&quot;&gt;
-    &lt;meta content=&quot;Small Island Developing States Photo Submission&quot; name=&quot;twitter:title&quot;&gt;
-    &lt;meta content=&quot;View the album on Flickr.&quot; name=&quot;twitter:description&quot;&gt;
-    &lt;meta content=&quot;https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg&quot; name=&quot;twitter:image&quot;&gt;</pre>
-</p>
-<twitter-summary site="@@flickr"
-  title="Small Island Developing States Photo Submission"
-  description="View the album on Flickr."
-  image="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg"/>
-
-<pre>&lt;twitter-summary-large-image site=&quot;@@nytimes&quot;
-  creator=&quot;@@SarahMaslinNir&quot;
-  title=&quot;Parade of Fans for Houston&CloseCurlyQuote;s Funeral&quot;
-  description=&quot;NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here.&quot;
-  image=&quot;http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg&quot; /&gt;</pre>
-<p>
-  Output:
-  <pre>&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
-&lt;meta name=&quot;twitter:site&quot; content=&quot;@@nytimes&quot;&gt;
-&lt;meta name=&quot;twitter:creator&quot; content=&quot;@@SarahMaslinNir&quot;&gt;
-&lt;meta name=&quot;twitter:title&quot; content=&quot;Parade of Fans for Houston&CloseCurlyQuote;s Funeral&quot;&gt;
-&lt;meta name=&quot;twitter:description&quot; content=&quot;NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here.&quot;&gt;
-&lt;meta name=&quot;twitter:image&quot; content=&quot;http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg&quot;&gt;</pre>
-</p>
-<twitter-summary-large-image site="@@nytimes"
-  creator="@@SarahMaslinNir"
-  title="Parade of Fans for Houston’s Funeral"
-  description="NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here."
-  image="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg" />
-
-<pre>
-&lt;twitter-app site=&quot;@@TwitterDev&quot;
-  description=&quot;Cannonball is the fun way to create and share stories and poems on your phone. Start with a beautiful image from the gallery, then choose words to complete the story and share it with friends.&quot;
-  country=&quot;US&quot;&gt;
-    &lt;app-iphone name=&quot;Cannonball&quot;
-      id=&quot;929750075&quot;
-      url=&quot;cannonball://poem/5149e249222f9e600a7540ef&quot; /&gt;
-    &lt;app-ipad name=&quot;Cannonball&quot;
-      id=&quot;929750075&quot;
-      url=&quot;cannonball://poem/5149e249222f9e600a7540ef&quot; /&gt;
-    &lt;app-googleplay name=&quot;Cannonball&quot;
-      id=&quot;io.fabric.samples.cannonball&quot;
-      url=&quot;http://cannonball.fabric.io/poem/5149e249222f9e600a7540ef&quot; /&gt;
-&lt;/twitter-app&gt;</pre>
-  <p>
-    Output:
-    <pre>
-&lt;meta name=&quot;twitter:card&quot; content=&quot;app&quot;&gt;
-&lt;meta name=&quot;twitter:site&quot; content=&quot;@@TwitterDev&quot;&gt;
-&lt;meta name=&quot;twitter:description&quot; content=&quot;Cannonball is the fun way to create and share stories and poems on your phone. Start with a beautiful image from the gallery, then choose words to complete the story and share it with friends.&quot;&gt;
-&lt;meta name=&quot;twitter:app:country&quot; content=&quot;US&quot;&gt;
-&lt;meta name=&quot;twitter:app:name:iphone&quot; content=&quot;Cannonball&quot;&gt;
-&lt;meta name=&quot;twitter:app:id:iphone&quot; content=&quot;929750075&quot;&gt;
-&lt;meta name=&quot;twitter:app:url:iphone&quot; content=&quot;cannonball://poem/5149e249222f9e600a7540ef&quot;&gt;
-&lt;meta name=&quot;twitter:app:name:ipad&quot; content=&quot;Cannonball&quot;&gt;
-&lt;meta name=&quot;twitter:app:id:ipad&quot; content=&quot;929750075&quot;&gt;
-&lt;meta name=&quot;twitter:app:url:ipad&quot; content=&quot;cannonball://poem/5149e249222f9e600a7540ef&quot;&gt;
-&lt;meta name=&quot;twitter:app:name:googleplay&quot; content=&quot;Cannonball&quot;&gt;
-&lt;meta name=&quot;twitter:app:id:googleplay&quot; content=&quot;io.fabric.samples.cannonball&quot;&gt;
-&lt;meta name=&quot;twitter:app:url:googleplay&quot; content=&quot;http://cannonball.fabric.io/poem/5149e249222f9e600a7540ef&quot;&gt;</pre>
-  </p>
-<twitter-app site="@@TwitterDev"
-  description="Cannonball is the fun way to create and share stories and poems on your phone. Start with a beautiful image from the gallery, then choose words to complete the story and share it with friends."
-  country="US">
-    <app-iphone name="Cannonball"
-      id="929750075"
-      url="cannonball://poem/5149e249222f9e600a7540ef" />
-    <app-ipad name="Cannonball"
-      id="929750075"
-      url="cannonball://poem/5149e249222f9e600a7540ef" />
-    <app-googleplay name="Cannonball"
-      id="io.fabric.samples.cannonball"
-      url="http://cannonball.fabric.io/poem/5149e249222f9e600a7540ef" />
-</twitter-app>
+<section>
+  <h2>Card Types</h2>
+  <ul>
+    <li>
+      <a asp-controller="Cards" asp-action="Summary">Summary Card</a>: Title, description, thumbnail, and Twitter account attribution.
+    </li>
+    <li>
+      <a asp-controller="Cards" asp-action="SummaryLargeImage">Summary Card with Large Image</a>: Similar to a Summary Card, but with a prominently featured image.
+    </li>
+    <li>
+      <a>App Card</a>: A Card to detail a mobile app with direct download. [TBD]
+    </li>
+    <li>
+      <a>Player Card</a>: A Card to provide video/audio/media. [TBD]
+    </li>
+  </ul>
+</section>
