@@ -1,0 +1,63 @@
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    // ViewBag.Title = "App Page";
+}
+<section>
+  <div class="page-header">
+    <h1>App Card <small>tag helper <span class="label label-info">WIP</span></small></h1>
+  </div>
+  <blockquote cite="https://dev.twitter.com/cards/types/app">
+    <p>The App Card is a great way to represent mobile applications on Twitter and to drive installs. We designed the App Card to allow for a name, description and icon, and also to highlight attributes such as the rating and the price.</p>
+  </blockquote>
+  <a href="https://dev.twitter.com/cards/types/app">https://dev.twitter.com/cards/types/app</a>
+  <pre>
+    <code class="html">&lt;twitter-app site=&quot;@@TwitterDev&quot;
+      title=&quot;Small Island Developing States Photo Submission&quot;
+      description=&quot;Cannonball is the fun way to create and share stories and poems on your phone. Start with a beautiful image from the gallery, then choose words to complete the story and share it with friends.&quot;
+      country=&quot;US&quot;&gt;
+        &lt;app-iphone name=&quot;Cannonball&quot;
+          id=&quot;929750075&quot;
+          url=&quot;cannonball://poem/5149e249222f9e600a7540ef&quot;/&gt;
+        &lt;app-ipad name=&quot;Cannonball&quot;
+          id=&quot;929750075&quot;
+          url=&quot;cannonball://poem/5149e249222f9e600a7540ef&quot;/&gt;
+        &lt;app-googleplay name=&quot;Cannonball&quot;
+          id=&quot;io.fabric.samples.cannonball&quot;
+          url=&quot;http://cannonball.fabric.io/poem/5149e249222f9e600a7540ef&quot;/&gt;
+&lt;/twitter-app&gt;</code>
+  </pre>
+  <p>
+    This will produce:
+  </p>
+  <pre>
+    <code class="html">&lt;meta name=&quot;twitter:card&quot; content=&quot;app&quot;&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@@TwitterDev&quot;&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;Cannonball is the fun way to create and share stories and poems on your phone. Start with a beautiful image from the gallery, then choose words to complete the story and share it with friends.&quot;&gt;
+&lt;meta name=&quot;twitter:app:country&quot; content=&quot;US&quot;&gt;
+&lt;meta name=&quot;twitter:app:name:iphone&quot; content=&quot;Cannonball&quot;&gt;
+&lt;meta name=&quot;twitter:app:id:iphone&quot; content=&quot;929750075&quot;&gt;
+&lt;meta name=&quot;twitter:app:url:iphone&quot; content=&quot;cannonball://poem/5149e249222f9e600a7540ef&quot;&gt;
+&lt;meta name=&quot;twitter:app:name:ipad&quot; content=&quot;Cannonball&quot;&gt;
+&lt;meta name=&quot;twitter:app:id:ipad&quot; content=&quot;929750075&quot;&gt;
+&lt;meta name=&quot;twitter:app:url:ipad&quot; content=&quot;cannonball://poem/5149e249222f9e600a7540ef&quot;&gt;
+&lt;meta name=&quot;twitter:app:name:googleplay&quot; content=&quot;Cannonball&quot;&gt;
+&lt;meta name=&quot;twitter:app:id:googleplay&quot; content=&quot;io.fabric.samples.cannonball&quot;&gt;
+&lt;meta name=&quot;twitter:app:url:googleplay&quot; content=&quot;http://cannonball.fabric.io/poem/5149e249222f9e600a7540ef&quot;&gt;</code>
+  </pre>
+</section>
+<twitter-app site="@@TwitterDev"
+  title="Small Island Developing States Photo Submission"
+  description="Cannonball is the fun way to create and share stories and poems on your phone. Start with a beautiful image from the gallery, then choose words to complete the story and share it with friends."
+  country="US">
+    <app-iphone name="Cannonball"
+      id="929750075"
+      url="cannonball://poem/5149e249222f9e600a7540ef"/>
+    <app-ipad name="Cannonball"
+      id="929750075"
+      url="cannonball://poem/5149e249222f9e600a7540ef"/>
+    <app-googleplay name=""
+      id="io.fabric.samples.cannonball"
+      url="http://cannonball.fabric.io/poem/5149e249222f9e600a7540ef"/>
+</twitter-app>
