@@ -1,0 +1,50 @@
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    // ViewBag.Title = "Player Page";
+}
+<section>
+  <div class="page-header">
+    <h1>Player Card <small>tag helper <span class="label label-info">WIP</span></small></h1>
+  </div>
+  <blockquote cite="https://dev.twitter.com/cards/types/player">
+    <p>Video clips and audio streams have a special place on the Twitter platform thanks to the Player Card. By implementing a few HTML meta tags to your website and following the Twitter Rules of the Road, you can deliver your rich media to users across the globe.</p>
+  </blockquote>
+  <a href="https://dev.twitter.com/cards/types/player">https://dev.twitter.com/cards/types/player</a>
+  <pre>
+    <code class="html">&lt;twitter-player site=&quot;@@rchoi&quot;
+      title=&quot;Sample Player Card&quot;
+      description=&quot;This is a sample video. When you implement, make sure all links are secure.&quot;
+      image=&quot;https://yoursite.com/example.png&quot;&gt;
+      &lt;player content=&quot;https://yoursite.com/container.html&quot;
+        width=&quot;480&quot; height=&quot;480&quot;
+        stream=&quot;https://yoursite.com/example.mp4&quot;
+        content_type=&quot;video/mp4&quot;/&gt;
+&lt;/twitter-player&gt;</code>
+  </pre>
+  <p>
+    This will produce:
+  </p>
+  <pre>
+    <code class="html">&lt;meta name=&quot;twitter:card&quot; content=&quot;player&quot;&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@@rchoi&quot;&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Sample Player Card&quot;&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;This is a sample video. When you implement, make sure all links are secure.&quot;&gt;
+&lt;meta name=&quot;twitter:image&quot; content=&quot;https://yoursite.com/example.png&quot;&gt;
+&lt;meta name=&quot;twitter:player&quot; content=&quot;https://yoursite.com/container.html&quot;&gt;
+&lt;meta name=&quot;twitter:player:width&quot; content=&quot;480&quot;&gt;
+&lt;meta name=&quot;twitter:player:height&quot; content=&quot;480&quot;&gt;
+&lt;meta name=&quot;twitter:player:stream&quot; content=&quot;https://yoursite.com/example.mp4&quot;&gt;
+&lt;meta name=&quot;twitter:player:stream:content_type&quot; content=&quot;video/mp4&quot;&gt;</code>
+  </pre>
+</section>
+<twitter-player site="@@rchoi"
+  title="Sample Player Card"
+  description="This is a sample video. When you implement, make sure all links are secure."
+  image="https://yoursite.com/example.png">
+  <player content="https://yoursite.com/container.html"
+    width="480" height="480"
+    stream="https://yoursite.com/example.mp4"
+    content_type="video/mp4"/>
+</twitter-player>

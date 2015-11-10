@@ -23,5 +23,10 @@ namespace TwitterCardTagHelpers.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Player()
+        {
+            return View();
+        }
     }
 }
